@@ -23,13 +23,13 @@ newPerson = {
 
 
 const createAndSavePerson = (newPerson, done) => {
-  personDoc = new Person();
+  personDoc = new Person({
+    Name: newPerson.Name,
+    age: newPerson.age,
+    favoriteFoods: newPerson.favoriteFoods
+  });
 
-    personDoc.Name = newPerson.Name;
-    personDoc.age = newPerson.age;
-    personDoc.favoriteFoods = newPerson.favoriteFoods;
-    personDoc.save;
-
+  personDoc.save();
   done(null /*, data*/);
 };
 
