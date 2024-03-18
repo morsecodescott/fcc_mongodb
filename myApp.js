@@ -12,7 +12,7 @@ let personSchema = new mongoose.Schema({
   favoriteFoods : [String]
   });
 
-let Person = mongoose.model('Person',
+let personModel = mongoose.model('Person',
  personSchema);
 
 newPerson = { 
@@ -22,7 +22,13 @@ newPerson = {
 }
 
 
-const createAndSavePerson = (done) => {
+const createAndSavePerson = (newPerson, done) => {
+  personDoc = new personModel()
+    .Name = newPerson.Name
+    .age = newPerson.age
+    .favoriteFoods = newPerson.favoriteFoods
+    .save
+
   done(null /*, data*/);
 };
 
