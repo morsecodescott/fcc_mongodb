@@ -22,14 +22,14 @@ newPerson = {
 }
 
 
-const createAndSavePerson = (newPerson, done) => {
+const createAndSavePerson = (done) => {
   console.log(newPerson);
   personDoc = new Person({
     name: newPerson.name,
     age: newPerson.age,
     favoriteFoods: newPerson.favoriteFoods
   });
-
+  console.log(personDoc);
   personDoc.save();
   done(null /*, data*/);
 };
