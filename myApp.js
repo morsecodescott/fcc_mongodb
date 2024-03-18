@@ -16,15 +16,16 @@ let Person = mongoose.model('Person',
  personSchema);
 
 newPerson = { 
-  "Name": "Scott", 
+  "name": "Scott", 
   "age": 43, 
   "favoriteFoods": ["Pizza","Beer"]
 }
 
 
 const createAndSavePerson = (newPerson, done) => {
+  console.log(newPerson);
   personDoc = new Person({
-    Name: newPerson.Name,
+    name: newPerson.name,
     age: newPerson.age,
     favoriteFoods: newPerson.favoriteFoods
   });
