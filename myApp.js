@@ -30,8 +30,10 @@ const createAndSavePerson = (done) => {
     favoriteFoods: newPerson.favoriteFoods
   });
   console.log(personDoc);
-  personDoc.save();
-  done(null /*, data*/);
+  personDoc.save(function(err, data) {
+    if (err) return console.error(err);
+    done(null, data)
+  });
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
