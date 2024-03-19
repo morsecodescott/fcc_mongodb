@@ -37,10 +37,10 @@ const createAndSavePerson = (done) => {
 };
 
 
-arrayOfPeople = [{name: 'Zoe', age: 10, favoriteFoods: ['gummies','dumplings']},
+/*arrayOfPeople = [{name: 'Zoe', age: 10, favoriteFoods: ['gummies','dumplings']},
 {name: 'Georrgia', age: 12, favoriteFoods: ['chips','mr. noodle']},
 {name: 'Jo', age: 43, favoriteFoods: ['chocolate','chips']}]
-
+*/
 
 const createManyPeople = (arrayOfPeople, done) => {
    console.log(arrayOfPeople);
