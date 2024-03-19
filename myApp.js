@@ -42,12 +42,11 @@ const createAndSavePerson = (done) => {
 {name: 'Jo', age: 43, favoriteFoods: ['chocolate','chips']}]
 */
 
-const createManyPeople = (arrayOfPeople, done) => {function(err,data){
+const createManyPeople = (arrayOfPeople, done) => {
     console.log(arrayOfPeople);
     Person.create(arrayOfPeople);
     if (err) confirm.error(err);
   done(null , data);
-}
 };
 
 const findPeopleByName = (personName, done) => {
