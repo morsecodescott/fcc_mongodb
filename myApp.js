@@ -43,10 +43,14 @@ arrayOfPeople = [{name: 'Zoe', age: 10, favoriteFoods: ['gummies','dumplings']},
 
 
 const createManyPeople = (arrayOfPeople, done) => {
-    console.log(arrayOfPeople);
-    Person.create(arrayOfPeople);
    
-  done(null , arrayOfPeople);
+    Person.create(arrayOfPeople, function(err,people){
+      if (err) console.error(err);
+      done(null , people);
+    }
+      );
+   
+  
 };
 
 const findPeopleByName = (personName, done) => {
