@@ -65,6 +65,7 @@ const findOneByFood = (food, done) => {
   Person.findOne({favoriteFoods: food}).exec(function(err,results){ 
     if (err) console.error(err);
     done(null , results);
+    
   });
 };
 
