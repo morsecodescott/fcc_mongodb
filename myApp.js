@@ -57,13 +57,12 @@ const findPeopleByName = (personName, done) => {
     if (err) console.error(err);
     done(null , results);
   }
-  );
-  
+  ); 
 };
 
 const findOneByFood = (food, done) => {
   console.log("Search term: " + food);
-  Person.findOne({favouriteFoods: food}).exec(function(err,results){ 
+  Person.findOne({favoriteFoods: food}).exec(function(err,results){ 
     if (err) console.error(err);
     done(null , results);
   });
